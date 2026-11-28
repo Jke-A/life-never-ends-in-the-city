@@ -34,4 +34,77 @@ canvas {
   margin: 0;
   font-size: 14px;
   color: #aaa;
+  text-align: center;
+}
+
+#touch-controls {
+  display: none;
+}
+
+@media (pointer: coarse), (any-pointer: coarse) {
+  body {
+    min-height: 100dvh;
+    box-sizing: border-box;
+    padding: 12px 0 16px;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: clamp(14px, 4vw, 24px);
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  canvas {
+    height: min(62vh, calc(90vw * 240 / 256));
+  }
+
+  .help {
+    display: none;
+  }
+
+  #touch-controls {
+    display: flex;
+    width: min(90vw, 480px);
+    align-items: center;
+    justify-content: space-between;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .touch-directions,
+  .touch-vertical,
+  .touch-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .touch-vertical,
+  .touch-actions {
+    flex-direction: column;
+  }
+
+  #touch-controls button {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #666;
+    border-radius: 12px;
+    background: #222e;
+    color: #fff;
+    font: bold 20px "Courier New", monospace;
+    touch-action: none;
+  }
+
+  #touch-controls button:active {
+    background: #f8d838;
+    color: #000;
+  }
+
+  .touch-actions button {
+    width: 72px !important;
+    height: 48px !important;
+    font-size: 12px !important;
+  }
 }

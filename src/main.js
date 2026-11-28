@@ -205,6 +205,7 @@
     acc += Math.min(now - last, 250);
     last = now;
     while (acc >= STEP) {
+      Input.update();
       update();
       Input.endFrame();
       acc -= STEP;

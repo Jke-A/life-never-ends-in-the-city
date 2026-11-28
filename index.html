@@ -9,7 +9,21 @@
 <body>
   <h1>LIFE NEVER ENDS IN THE CITY</h1>
   <canvas id="game" width="256" height="240"></canvas>
-  <p class="help">&larr; &rarr; / A D: walk &nbsp;&nbsp; Space / &uarr; / W: jump<br>Helicopter: arrows / WASD: fly &nbsp;&nbsp; Space / X: shoot</p>
+  <p class="help">&larr; &rarr; / A D: walk &nbsp;&nbsp; Space / &uarr; / W: jump<br>Helicopter: arrows / WASD: fly &nbsp;&nbsp; Space / X: shoot<br>Touchscreen: on-screen buttons &nbsp;&nbsp; Gamepad: D-pad / stick + A (jump) / X (shoot)</p>
+  <div id="touch-controls" aria-label="Touch controls">
+    <div class="touch-directions">
+      <button type="button" data-control="left" aria-label="Move left">&larr;</button>
+      <div class="touch-vertical">
+        <button type="button" data-control="up" aria-label="Move up">&uarr;</button>
+        <button type="button" data-control="down" aria-label="Move down">&darr;</button>
+      </div>
+      <button type="button" data-control="right" aria-label="Move right">&rarr;</button>
+    </div>
+    <div class="touch-actions">
+      <button type="button" data-control="jump" aria-label="Jump">JUMP</button>
+      <button type="button" data-control="fire" aria-label="Fire">FIRE</button>
+    </div>
+  </div>
 
   <script src="src/config.js"></script>
   <script src="src/input.js"></script>
